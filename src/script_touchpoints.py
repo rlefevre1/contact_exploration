@@ -135,6 +135,9 @@ removeTouchpointsCollision("left", "talos/left_gripper < desk/touchpoint_left_fr
 removeTouchpointsCollision("left", "talos/left_gripper > desk/touchpoint_left_drawer | f_12", "universe")
 removeTouchpointsCollision("left", "talos/left_gripper < desk/touchpoint_left_drawer | 0-4_21", "universe")
 
+removeTouchpointsCollision("right", "talos/right_gripper > desk/touchpoint_right_front | f_12", "desk/upper_case_bottom_upper_drawer_bottom_joint")
+removeTouchpointsCollision("right", "talos/right_gripper < desk/touchpoint_right_front | 1-2_21", "desk/upper_case_bottom_upper_drawer_bottom_joint")
+
 # create q_init and q_goal respecting the defined constraints
 _, q_init, _ = graph.applyNodeConstraints("free", q)
 q_goal = q_init[:] ; q_goal[len(q_goal)-1] -= 0.25
